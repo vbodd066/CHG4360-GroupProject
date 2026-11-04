@@ -7,8 +7,7 @@ import src.functions as sf  # This allows you to access functions from functions
 from src.classes import Batch  # This allows you to import individual Classes from classes.py
 from src.constants import *  # This imports all constants from constants.py
 
-ph_optimal = sf.calculate_average(PH_LIMITS)
-temperature_optimal = sf.calculate_average(TEMPERATURE_LIMITS)
+# 1. load the data and hold out a test set
+df = sf.load_data()
+x_train, x_test, y_train, y_test = sf.split_data(df)
 
-batch = Batch(batch_id=1, ph_opt=ph_optimal, temperature_opt=temperature_optimal)
-batch.display_info()

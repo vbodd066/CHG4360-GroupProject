@@ -3,5 +3,14 @@
 # Define constant values that do not change throughout your program.
 # =======================================================================
 
-PH_LIMITS = (6.8, 7.2)
-TEMPERATURE_LIMITS = (35.0, 37.0)
+# Path to Dataset
+DATASET = "datasets/dataset_cell_growth_7factor.csv"
+
+# Features and target column names in raw dataset
+FEATURES = ["Temperature [C]","pH,Glucose [mM]","Glutamine [mM]","Lactate [mM]","Ammonia [mM]","Viable Cell Density [cells/mL]"]
+TARGET = ["Specific Growth Rate [d^-1]","Specific Death Rate [d^-1]","Specific Production Rate [pg cell^-1 d^-1]"]
+
+# Train-Test split
+TEST_SIZE = 0.2
+RANDOM_STATE = 41
+
